@@ -1,3 +1,27 @@
+body {
+  background-color: #f1e9d7;
+}
+
+.topLine {
+  top: 10%;
+  height: 0;
+  width: 100%;
+  border: 1px solid #36374f;
+  margin: 2.5rem 0 2rem 2rem;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  margin-bottom: 2rem;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +29,113 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.extend-page {
+  min-height: 100vh;
+}
+
+.btn-primary {
+  outline: none;
+  display: block;
+  background-color: #505fa3;
+  opacity: 0.75;
+  color: #f1e9d7;
+  font-size: 16px;
+  border: none;
+  height: 2.7rem;
+  width: 9rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 1;
+  color: #e7ab5d;
+}
+
+.btn-secondary {
+  outline: none;
+  float: right;
+  display: block;
+  background-color: #e7ab5d;
+  opacity: 0.75;
+  color: #f1e9d7;
+  font-size: 16px;
+  border: none;
+  height: 2.7rem;
+  width: 9rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  color: #505fa3;
+  opacity: 1;
+}
+
+.btn-center {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  min-height: 93vh;
+  background-color: #36374f;
+}
+
+.content-bg {
+  background: url("./assets/img/home/home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 93vh;
+  min-width: 70vw;
+  float: left;
+}
+
+.content-text {
+  color: #f1e9d7;
+  text-align: right;
+  position: absolute;
+  top: 130%;
+  right: 0;
+  width: 24rem;
+  margin-right: 7rem;
+}
+
+.footer {
+  display: flex;
+  min-height: 7vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  font-size: 14px;
+}
+
+video {
+  width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  video {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 30%;
+  }
+  .btn-center {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70%;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
