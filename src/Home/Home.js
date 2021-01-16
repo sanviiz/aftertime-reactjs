@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import history from "../history";
-import Logo from "../assets/logo/logo-2x.png";
+import Logo from "../assets/logo/logo-dark.png";
 
 export default function Home() {
   const bottomRef = useRef();
