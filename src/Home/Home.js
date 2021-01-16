@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import history from "../history";
 import Logo from "../assets/logo/logo-2x.png";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
   };
 
   return (
-    <div className="App">
+    <>
       <div className="page">
         <div className="topBar">
           <img src={Logo} alt="aftertime-logo" className="logo" />
@@ -34,7 +35,16 @@ export default function Home() {
               you to emphasise what is important to you, and encourage you to
               preserve your favourite objects by sending them into your future.
             </p>
-            <button className="btn-secondary">BEGIN</button>
+            <form>
+              <button
+                className="btn-secondary"
+                onClick={() => {
+                  history.push("/intro");
+                }}
+              >
+                BEGIN
+              </button>
+            </form>
           </div>
         </div>
         <div className="footer">
@@ -46,6 +56,6 @@ export default function Home() {
         </div>
         <div ref={bottomRef}></div>
       </div>
-    </div>
+    </>
   );
 }
