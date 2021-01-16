@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import history from "../history";
+import Topbar from "../components/Topbar";
 import Logo from "../assets/logo/logo-dark.png";
 
 export default function Home() {
@@ -12,12 +14,14 @@ export default function Home() {
   };
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="page">
-        <div className="topBar">
-          <img src={Logo} alt="aftertime-logo" className="logo" />
-          <div className="topLine"></div>
-        </div>
+        <Topbar imgSrc={Logo} lineColor="topLine-dark" />
         <video controls></video>
         <div className="btn-center">
           <button className="btn-primary" onClick={scrollToBottom}>
@@ -56,6 +60,6 @@ export default function Home() {
         </div>
         <div ref={bottomRef}></div>
       </div>
-    </>
+    </motion.div>
   );
 }

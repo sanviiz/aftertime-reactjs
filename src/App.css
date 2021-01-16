@@ -2,11 +2,19 @@ body {
   background-color: #f1e9d7;
 }
 
-.topLine {
+.topLine-dark {
   top: 10%;
   height: 0;
   width: 100%;
   border: 1px solid #36374f;
+  margin: 2.5rem 0 2rem 2rem;
+}
+
+.topLine-light {
+  top: 10%;
+  height: 0;
+  width: 100%;
+  border: 1px solid #f1e9d7;
   margin: 2.5rem 0 2rem 2rem;
 }
 
@@ -33,6 +41,14 @@ body {
 
 .page {
   min-height: 100vh;
+  background-color: #f1e9d7;
+}
+
+.page-dark {
+  min-height: 100vh;
+  background-color: #36374f;
+  position: relative;
+  z-index: -10;
 }
 
 .extend-page {
@@ -63,7 +79,7 @@ body {
   float: right;
   display: block;
   background-color: #e7ab5d;
-  opacity: 0.75;
+  opacity: 1;
   color: #f1e9d7;
   font-size: 16px;
   border: none;
@@ -74,6 +90,7 @@ body {
 }
 
 .btn-secondary:hover {
+  background-color: #cf9953;
   color: #505fa3;
   opacity: 1;
 }
@@ -85,28 +102,28 @@ body {
   align-items: center;
 }
 
-.content {
+.extend-page .content {
   min-height: 93vh;
   background-color: #36374f;
 }
 
-.content-bg {
+.extend-page .content-bg {
   background: url("./assets/img/home/home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 93vh;
-  min-width: 70vw;
+  min-width: 65vw;
   float: left;
 }
 
-.content-text {
+.extend-page .content-text {
   color: #f1e9d7;
   text-align: right;
   position: absolute;
   top: 130%;
   right: 0;
-  width: 24rem;
+  width: 25rem;
   margin-right: 7rem;
 }
 
@@ -117,6 +134,29 @@ body {
   justify-content: space-between;
   padding: 0 5rem;
   font-size: 14px;
+}
+
+.page-dark .content-bg {
+  background: url("./assets/img/intro/intro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 65vw;
+  float: left;
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+
+.page-dark .content-text {
+  color: #f1e9d7;
+  text-align: right;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: 25rem;
+  margin-right: 7rem;
 }
 
 video {
