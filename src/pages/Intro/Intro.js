@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useHistory } from "react-router-dom";
 import Topbar from "../../components/Topbar";
 import Logo from "../../assets/logo/logo-light.png";
 import { motion } from "framer-motion";
 
-export default function Intro() {
+export default function Intro({ addImage }) {
+  const history = useHistory();
+  const fileInput = useRef();
+  const upload = () => {
+    fileInput.current.click();
+  };
+  const finishSelect = (e) => {
+    console.log(e.target.files[0]);
+    let imgFile = URL.createObjectURL(e.target.files[0]);
+    addImage(imgFile);
+    history.push("/question");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -20,7 +33,16 @@ export default function Intro() {
             Prepare a photograph of an item you wish to send into your future,
             and let’s see if it has significance to you.
           </p>
-          <button className="btn-secondary">UPLOAD</button>
+          <input
+            ref={fileInput}
+            type="file"
+            accept="image/png, image/jpeg"
+            onChange={finishSelect}
+            hidden
+          />
+          <button className="btn-secondary" onClick={upload}>
+            UPLOAD
+          </button>
         </div>
       </div>
     </motion.div>
