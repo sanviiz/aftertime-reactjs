@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import history from "../history";
-import Topbar from "../components/Topbar";
-import Logo from "../assets/logo/logo-dark.png";
+import { Link } from "react-router-dom";
+import Topbar from "../../components/Topbar";
+import Logo from "../../assets/logo/logo-dark.png";
 
 export default function Home() {
   const bottomRef = useRef();
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, x: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
@@ -39,16 +39,9 @@ export default function Home() {
               you to emphasise what is important to you, and encourage you to
               preserve your favourite objects by sending them into your future.
             </p>
-            <form>
-              <button
-                className="btn-secondary"
-                onClick={() => {
-                  history.push("/intro");
-                }}
-              >
-                BEGIN
-              </button>
-            </form>
+            <Link to="/intro">
+              <button className="btn-secondary">BEGIN</button>
+            </Link>
           </div>
         </div>
         <div className="footer">

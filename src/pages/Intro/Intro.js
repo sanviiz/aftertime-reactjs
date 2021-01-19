@@ -1,7 +1,6 @@
 import React from "react";
-import Topbar from "../components/Topbar";
-import history from "../history";
-import Logo from "../assets/logo/logo-light.png";
+import Topbar from "../../components/Topbar";
+import Logo from "../../assets/logo/logo-light.png";
 import { motion } from "framer-motion";
 
 export default function Intro() {
@@ -21,9 +20,7 @@ export default function Intro() {
             Prepare a photograph of an item you wish to send into your future,
             and let’s see if it has significance to you.
           </p>
-          <form>
-            <button className="btn-secondary">UPLOAD</button>
-          </form>
+          <button className="btn-secondary">UPLOAD</button>
         </div>
       </div>
     </motion.div>
