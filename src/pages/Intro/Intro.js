@@ -6,12 +6,14 @@ import { motion } from "framer-motion";
 
 export default function Intro({ addImage }) {
   const history = useHistory();
+
   const fileInput = useRef();
+
   const upload = () => {
     fileInput.current.click();
   };
+
   const finishSelect = (e) => {
-    console.log(e.target.files[0]);
     let imgFile = URL.createObjectURL(e.target.files[0]);
     addImage(imgFile);
     history.push("/question");

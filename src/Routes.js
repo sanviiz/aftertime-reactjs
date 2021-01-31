@@ -7,12 +7,25 @@ import Question from "./pages/Question/Question";
 
 export default function Routes() {
   const location = useLocation();
+
   const [round, setRound] = useState(0);
+
   const [images, setImages] = useState([]);
+
+  const [call, setCall] = useState([]);
+
+  const [give, setGive] = useState([]);
+
+  const [who, setWho] = useState([]);
+
+  const [note, setNote] = useState([]);
+
+  const [perspective, setPerspective] = useState([]);
 
   const addImage = (path) => {
     setImages([...images, path]);
   };
+
   const addRound = () => {
     setRound((prevRound) => prevRound + 1);
   };
@@ -27,7 +40,20 @@ export default function Routes() {
           <Intro addImage={addImage} />
         </Route>
         <Route path="/question">
-          <Question images={images} round={round} />
+          <Question
+            image={images[round]}
+            addRound={addRound}
+            call={call}
+            setCall={setCall}
+            give={give}
+            setGive={setGive}
+            who={who}
+            setWho={setWho}
+            note={note}
+            setNote={setNote}
+            perspective={perspective}
+            setPerspective={setPerspective}
+          />
         </Route>
       </Switch>
     </AnimatePresence>

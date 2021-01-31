@@ -6,6 +6,7 @@ import Logo from "../../assets/logo/logo-dark.png";
 
 export default function Home() {
   const bottomRef = useRef();
+
   const scrollToBottom = () => {
     bottomRef.current.scrollIntoView({
       behavior: "smooth",
