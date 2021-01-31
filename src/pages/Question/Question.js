@@ -224,6 +224,7 @@ export default function Question({
               addProgress={addProgress}
               setQuestion={setQuestion}
               question={question}
+              score={score}
               perspective={perspective}
               setPerspective={setPerspective}
             />

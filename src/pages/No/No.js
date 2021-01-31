@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 class No extends Component {
   render() {
-    return <div>No</div>;
+    return (
+      <div>
+        <h1 style={{ color: "red" }}>No</h1>
+      </div>
+    );
   }
 }
 

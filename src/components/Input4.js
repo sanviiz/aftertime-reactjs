@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { useHistory } from "react-router-dom";
 
 export default function Input4({
   addProgress,
@@ -7,11 +8,21 @@ export default function Input4({
   question,
   setPerspective,
   perspective,
+  score,
 }) {
+  const history = useHistory();
+
   const updateProgress = () => {
     addProgress(5);
     setQuestion({ ...question, input4: false });
     setPerspective([...perspective, input.current.value]);
+    setTimeout(() => {
+      if (score >= 2) {
+        history.push("/yes");
+      } else {
+        history.push("/no");
+      }
+    }, 500);
   };
 
   const input = useRef();

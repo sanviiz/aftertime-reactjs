@@ -4,6 +4,9 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home/Home";
 import Intro from "./pages/Intro/Intro";
 import Question from "./pages/Question/Question";
+import Yes from "./pages/Yes/Yes";
+import No from "./pages/No/No";
+import Send from "./pages/Send/Send";
 
 export default function Routes() {
   const location = useLocation();
@@ -54,6 +57,21 @@ export default function Routes() {
             perspective={perspective}
             setPerspective={setPerspective}
           />
+        </Route>
+        <Route path="/yes">
+          <Yes
+            call={call[round]}
+            give={give[round]}
+            who={who[round]}
+            note={note[round]}
+            perspective={perspective[round]}
+          />
+        </Route>
+        <Route path="/no">
+          <No />
+        </Route>
+        <Route path="/send">
+          <Send />
         </Route>
       </Switch>
     </AnimatePresence>

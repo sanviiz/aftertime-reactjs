@@ -1,12 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useHistory } from "react-router-dom";
 
 export default function Choice10({
   addProgress,
   setQuestion,
   question,
   addScore,
+  score,
 }) {
+  const history = useHistory();
+
   const updateProgressYes = () => {
     addProgress(5);
     addScore();
@@ -16,6 +20,13 @@ export default function Choice10({
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, ten: false });
+    setTimeout(() => {
+      if (score >= 3) {
+        history.push("/yes");
+      } else {
+        history.push("/no");
+      }
+    }, 500);
   };
 
   return (
