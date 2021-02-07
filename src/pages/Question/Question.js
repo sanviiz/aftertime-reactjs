@@ -22,6 +22,18 @@ import Input4 from "../../components/Input4";
 export default function Question({
   image,
   addRound,
+  two,
+  setTwo,
+  three,
+  setThree,
+  five,
+  setFive,
+  seven,
+  setSeven,
+  eight,
+  setEight,
+  nine,
+  setNine,
   call,
   setCall,
   give,
@@ -112,6 +124,8 @@ export default function Question({
               setQuestion={setQuestion}
               question={question}
               addScore={addScore}
+              two={two}
+              setTwo={setTwo}
             />
           )}
         </AnimatePresence>
@@ -122,6 +136,8 @@ export default function Question({
               setQuestion={setQuestion}
               question={question}
               addScore={addScore}
+              three={three}
+              setThree={setThree}
             />
           )}
         </AnimatePresence>
@@ -153,6 +169,8 @@ export default function Question({
               setQuestion={setQuestion}
               question={question}
               addScore={addScore}
+              five={five}
+              setFive={setFive}
             />
           )}
         </AnimatePresence>
@@ -184,6 +202,8 @@ export default function Question({
               setQuestion={setQuestion}
               question={question}
               addScore={addScore}
+              seven={seven}
+              setSeven={setSeven}
             />
           )}
         </AnimatePresence>
@@ -194,6 +214,8 @@ export default function Question({
               setQuestion={setQuestion}
               question={question}
               addScore={addScore}
+              eight={eight}
+              setEight={setEight}
             />
           )}
         </AnimatePresence>
@@ -204,6 +226,8 @@ export default function Question({
               setQuestion={setQuestion}
               question={question}
               addScore={addScore}
+              nine={nine}
+              setNine={setNine}
             />
           )}
         </AnimatePresence>

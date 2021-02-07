@@ -6,16 +6,20 @@ export default function Choice8({
   setQuestion,
   question,
   addScore,
+  eight,
+  setEight,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
     addScore();
     setQuestion({ ...question, eight: false, nine: true });
+    setEight([...eight, true]);
   };
 
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, eight: false, nine: true });
+    setEight([...eight, false]);
   };
 
   return (

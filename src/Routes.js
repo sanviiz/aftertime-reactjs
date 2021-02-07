@@ -25,6 +25,18 @@ export default function Routes() {
 
   const [perspective, setPerspective] = useState([]);
 
+  const [two, setTwo] = useState([]);
+
+  const [three, setThree] = useState([]);
+
+  const [five, setFive] = useState([]);
+
+  const [seven, setSeven] = useState([]);
+
+  const [eight, setEight] = useState([]);
+
+  const [nine, setNine] = useState([]);
+
   const addImage = (path) => {
     setImages([...images, path]);
   };
@@ -46,6 +58,18 @@ export default function Routes() {
           <Question
             image={images[round]}
             addRound={addRound}
+            two={two}
+            setTwo={setTwo}
+            three={three}
+            setThree={setThree}
+            five={five}
+            setFive={setFive}
+            seven={seven}
+            setSeven={setSeven}
+            eight={eight}
+            setEight={setEight}
+            nine={nine}
+            setNine={setNine}
             call={call}
             setCall={setCall}
             give={give}
@@ -60,6 +84,12 @@ export default function Routes() {
         </Route>
         <Route path="/yes">
           <Yes
+            two={two[round]}
+            three={three[round]}
+            five={five[round]}
+            seven={seven[round]}
+            eight={eight[round]}
+            nine={nine[round]}
             call={call[round]}
             give={give[round]}
             who={who[round]}

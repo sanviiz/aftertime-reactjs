@@ -103,7 +103,7 @@ body {
 }
 
 .btn-center {
-  margin-top: 5%;
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,10 +166,6 @@ body {
   margin-right: 7rem;
 }
 
-video {
-  width: 70%;
-}
-
 .question-image {
   width: 20rem;
   border: 1px solid #707070;
@@ -213,13 +209,18 @@ video {
   font-weight: 500;
 }
 
+.player-wrapper {
+  position: relative;
+  padding-top: 39.4%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
 @media only screen and (max-width: 600px) {
-  video {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 30%;
-  }
   .btn-center {
     width: 100%;
     position: absolute;

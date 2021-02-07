@@ -6,16 +6,20 @@ export default function Choice3({
   setQuestion,
   question,
   addScore,
+  three,
+  setThree,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
     addScore();
     setQuestion({ ...question, three: false, four: true });
+    setThree([...three, true]);
   };
 
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, three: false, four: true });
+    setThree([...three, false]);
   };
 
   return (

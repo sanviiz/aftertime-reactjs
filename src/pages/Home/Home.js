@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 import Topbar from "../../components/Topbar";
 import Logo from "../../assets/logo/logo-dark.png";
 
@@ -23,7 +24,16 @@ export default function Home() {
     >
       <div className="page">
         <Topbar imgSrc={Logo} lineColor="topLine-dark" />
-        <video controls></video>
+        <div className="player-wrapper">
+          <ReactPlayer
+            className="react-player"
+            url="https://youtu.be/Oh6HJxCutQc"
+            playing="true"
+            volume="0.3"
+            width="70%"
+            height="100%"
+          />
+        </div>
         <div className="btn-center">
           <button className="btn-primary" onClick={scrollToBottom}>
             NEXT

@@ -6,16 +6,20 @@ export default function Choice2({
   setQuestion,
   question,
   addScore,
+  two,
+  setTwo,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
     addScore();
     setQuestion({ ...question, two: false, three: true });
+    setTwo([...two, true]);
   };
 
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, two: false, three: true });
+    setTwo([...two, false]);
   };
 
   return (

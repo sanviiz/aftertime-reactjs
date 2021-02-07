@@ -6,16 +6,20 @@ export default function Choice5({
   setQuestion,
   question,
   addScore,
+  five,
+  setFive,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
     addScore();
     setQuestion({ ...question, five: false, six: true });
+    setFive([...five, true]);
   };
 
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, five: false, six: true });
+    setFive([...five, false]);
   };
 
   return (

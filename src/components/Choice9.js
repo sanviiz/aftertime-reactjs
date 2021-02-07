@@ -6,16 +6,20 @@ export default function Choice9({
   setQuestion,
   question,
   addScore,
+  nine,
+  setNine,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
     addScore();
     setQuestion({ ...question, nine: false, ten: true });
+    setNine([...nine, true]);
   };
 
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, nine: false, ten: true });
+    setNine([...nine, false]);
   };
 
   return (

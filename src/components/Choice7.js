@@ -6,16 +6,20 @@ export default function Choice7({
   setQuestion,
   question,
   addScore,
+  seven,
+  setSeven,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
     addScore();
     setQuestion({ ...question, seven: false, eight: true });
+    setSeven([...seven, true]);
   };
 
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, seven: false, eight: true });
+    setSeven([...seven, false]);
   };
 
   return (
