@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Choice9({
@@ -8,6 +8,7 @@ export default function Choice9({
   addScore,
   nine,
   setNine,
+  setTooltip,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
@@ -22,6 +23,12 @@ export default function Choice9({
     setNine([...nine, false]);
   };
 
+  useEffect(() => {
+    setTooltip(
+      "If you feel passionate about an item, it would probably be the last thing you would discard."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -33,13 +40,13 @@ export default function Choice9({
         <p>Do you feel passionate about this item?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

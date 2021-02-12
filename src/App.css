@@ -2,8 +2,10 @@
   font-family: Apertura;
 }
 
-body {
+body,
+html {
   background-color: #f1e9d7;
+  height: 100%;
 }
 
 .topLine-dark {
@@ -31,7 +33,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 10%;
-  margin-bottom: 2rem;
+  height: 10vh;
 }
 
 .App {
@@ -60,7 +62,7 @@ body {
   min-height: 100vh;
 }
 
-.btn-primary {
+.button-primary {
   outline: none;
   display: block;
   background-color: #505fa3;
@@ -75,12 +77,12 @@ body {
   transition: 0.3s;
 }
 
-.btn-primary:hover {
+.button-primary:hover {
   opacity: 1;
   color: #e7ab5d;
 }
 
-.btn-secondary {
+.button-secondary {
   outline: none;
   float: right;
   display: block;
@@ -96,7 +98,7 @@ body {
   transition: 0.3s;
 }
 
-.btn-secondary:hover {
+.button-secondary:hover {
   background-color: #cf9953;
   color: #505fa3;
   opacity: 1;
@@ -143,6 +145,10 @@ body {
   font-size: 14px;
 }
 
+.footer p {
+  margin: 0;
+}
+
 .page-dark .content-bg {
   background: url("./assets/img/intro/intro.png");
   background-size: cover;
@@ -167,11 +173,7 @@ body {
 }
 
 .question-image {
-  width: 20rem;
-  border: 1px solid #707070;
-  position: absolute;
-  top: 30%;
-  left: 20%;
+  box-shadow: 0px 3px 6px #00000029;
   z-index: 1;
 }
 
@@ -197,10 +199,6 @@ body {
 }
 
 .question-group {
-  position: absolute;
-  margin-top: 10rem;
-  width: 40%;
-  right: 10%;
   z-index: -1;
 }
 
@@ -210,6 +208,7 @@ body {
 }
 
 .player-wrapper {
+  margin-top: 2rem;
   position: relative;
   padding-top: 39.4%;
 }
@@ -218,6 +217,13 @@ body {
   position: absolute;
   top: 0;
   left: 15%;
+}
+
+.question-container {
+  display: flex;
+  height: 75vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {

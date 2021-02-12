@@ -42,7 +42,7 @@ export default function Intro({ addImage }) {
             onChange={finishSelect}
             hidden
           />
-          <button className="btn-secondary" onClick={upload}>
+          <button className="button-secondary" onClick={upload}>
             UPLOAD
           </button>
         </div>

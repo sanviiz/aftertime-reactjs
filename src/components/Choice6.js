@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Choice6({
@@ -6,6 +6,7 @@ export default function Choice6({
   setQuestion,
   question,
   addScore,
+  setTooltip,
 }) {
   const updateProgressYes = () => {
     addProgress(5);
@@ -18,6 +19,12 @@ export default function Choice6({
     setQuestion({ ...question, six: false, seven: true });
   };
 
+  useEffect(() => {
+    setTooltip(
+      "Immediately being able to recall some story about it means that this item should be something that important to you."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -29,13 +36,13 @@ export default function Choice6({
         <p>Does this item have a story behind it?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

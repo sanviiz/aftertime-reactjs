@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Choice2({
@@ -8,6 +8,7 @@ export default function Choice2({
   addScore,
   two,
   setTwo,
+  setTooltip,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
@@ -22,6 +23,12 @@ export default function Choice2({
     setTwo([...two, false]);
   };
 
+  useEffect(() => {
+    setTooltip(
+      "An item that has been with you since your childhood has also passed through the transition stages of your life."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -33,13 +40,13 @@ export default function Choice2({
         <p>Has this item been with you since childhood?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

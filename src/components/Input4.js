@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 
@@ -9,6 +9,7 @@ export default function Input4({
   setPerspective,
   perspective,
   score,
+  setTooltip,
 }) {
   const history = useHistory();
 
@@ -27,6 +28,10 @@ export default function Input4({
 
   const input = useRef();
 
+  useEffect(() => {
+    setTooltip("#");
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -39,7 +44,7 @@ export default function Input4({
         <input type="text" className="question-input" ref={input} />
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgress}
           >

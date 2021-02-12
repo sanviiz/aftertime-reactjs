@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Choice3({
@@ -8,6 +8,7 @@ export default function Choice3({
   addScore,
   three,
   setThree,
+  setTooltip,
 }) {
   const updateProgressYes = () => {
     addProgress(10);
@@ -22,6 +23,12 @@ export default function Choice3({
     setThree([...three, false]);
   };
 
+  useEffect(() => {
+    setTooltip(
+      "An item that has been passed on should be something that was forwarded from the generations."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -33,13 +40,13 @@ export default function Choice3({
         <p>Has this item been passed on?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

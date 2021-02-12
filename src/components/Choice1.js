@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Choice1({
@@ -6,6 +6,7 @@ export default function Choice1({
   setQuestion,
   question,
   addScore,
+  setTooltip,
 }) {
   const updateProgressYes = () => {
     addProgress(2.5);
@@ -18,6 +19,12 @@ export default function Choice1({
     setQuestion({ ...question, one: false, two: true });
   };
 
+  useEffect(() => {
+    setTooltip(
+      "An item that was given by someone always retains something of the giver."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -29,13 +36,13 @@ export default function Choice1({
         <p>Was this item given to you by someone?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Input0({
@@ -7,12 +7,17 @@ export default function Input0({
   question,
   setCall,
   call,
+  setTooltip,
 }) {
   const updateProgress = () => {
     addProgress(5);
     setQuestion({ ...question, input0: false, one: true });
     setCall([...call, input.current.value]);
   };
+
+  useEffect(() => {
+    setTooltip("Type the name that you normally call this item.");
+  });
 
   const input = useRef();
 
@@ -28,7 +33,7 @@ export default function Input0({
         <input type="text" className="question-input" ref={input} />
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgress}
           >

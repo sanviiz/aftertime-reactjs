@@ -35,7 +35,7 @@ export default function Home() {
           />
         </div>
         <div className="btn-center">
-          <button className="btn-primary" onClick={scrollToBottom}>
+          <button className="button-primary" onClick={scrollToBottom}>
             NEXT
           </button>
         </div>
@@ -51,7 +51,7 @@ export default function Home() {
               preserve your favourite objects by sending them into your future.
             </p>
             <Link to="/intro">
-              <button className="btn-secondary">BEGIN</button>
+              <button className="button-secondary">BEGIN</button>
             </Link>
           </div>
         </div>

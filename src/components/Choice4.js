@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Choice4({
@@ -6,6 +6,7 @@ export default function Choice4({
   setQuestion,
   question,
   addScore,
+  setTooltip,
 }) {
   const updateProgressYes = () => {
     addProgress(5);
@@ -18,6 +19,12 @@ export default function Choice4({
     setQuestion({ ...question, four: false, five: true });
   };
 
+  useEffect(() => {
+    setTooltip(
+      "An item could remind you of a memorable event, place or person."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -29,13 +36,13 @@ export default function Choice4({
         <p>Is this item remind you of someone or somewhere?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

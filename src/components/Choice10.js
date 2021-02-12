@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 
@@ -8,6 +8,7 @@ export default function Choice10({
   question,
   addScore,
   score,
+  setTooltip,
 }) {
   const history = useHistory();
 
@@ -29,6 +30,12 @@ export default function Choice10({
     }, 500);
   };
 
+  useEffect(() => {
+    setTooltip(
+      "An item that helped you see in a new perspective should be significant to you as a gate to the new vision."
+    );
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
@@ -40,13 +47,13 @@ export default function Choice10({
         <p>Has item helped you find a new perspective?</p>
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgressYes}
           >
             Yes
           </button>
-          <button className="btn-primary" onClick={updateProgressNo}>
+          <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>
         </div>

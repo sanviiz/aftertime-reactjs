@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Input2({
@@ -7,6 +7,7 @@ export default function Input2({
   question,
   setWho,
   who,
+  setTooltip,
 }) {
   const updateProgress = () => {
     addProgress(5);
@@ -15,6 +16,10 @@ export default function Input2({
   };
 
   const input = useRef();
+
+  useEffect(() => {
+    setTooltip("#");
+  });
 
   return (
     <motion.div
@@ -28,7 +33,7 @@ export default function Input2({
         <input type="text" className="question-input" ref={input} />
         <div className="question-btn">
           <button
-            className="btn-primary"
+            className="button-primary"
             style={{ marginBottom: "2rem" }}
             onClick={updateProgress}
           >
