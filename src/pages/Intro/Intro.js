@@ -30,21 +30,29 @@ export default function Intro({ addImage }) {
         <Topbar imgSrc={Logo} lineColor="topLine-light" />
         <div className="content-bg"></div>
         <div className="content-text">
-          <h1>Bring your beloved stuff to your future</h1>
-          <p>
-            Prepare a photograph of an item you wish to send into your future,
-            and let’s see if it has significance to you.
-          </p>
-          <input
-            ref={fileInput}
-            type="file"
-            accept="image/png, image/jpeg"
-            onChange={finishSelect}
-            hidden
-          />
-          <button className="button-secondary" onClick={upload}>
-            UPLOAD
-          </button>
+          <div style={{ width: "700px" }}>
+            <h1 className="display-4 mb-4" style={{ fontWeight: "500" }}>
+              Sentimental Value Quiz
+            </h1>
+            <p className="mb-4" style={{ fontSize: "1.2rem" }}>
+              Prepare a digital photograph of an item you wish to send to your
+              future; make sure that the object can be seen clearly in the
+              photo.
+              <br />* If possible, take the photo of your item against a plain
+              background.
+            </p>
+            <h5 className="mb-3">Let’s see if it has significance to you.</h5>
+            <input
+              ref={fileInput}
+              type="file"
+              accept="image/png, image/jpeg"
+              onChange={finishSelect}
+              hidden
+            />
+            <button className="button-primary" onClick={upload}>
+              UPLOAD
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>

@@ -20,7 +20,7 @@ html {
   top: 10%;
   height: 0;
   width: 100%;
-  border: 1px solid #f1e9d7;
+  border: 1px solid #fff;
   margin: 2.5rem 0 2rem 2rem;
 }
 
@@ -64,12 +64,13 @@ html {
 
 .button-primary {
   outline: none;
-  display: block;
-  background-color: #505fa3;
-  opacity: 0.75;
-  color: #f1e9d7;
+  display: inline-block;
+  background-color: transparent;
+  opacity: 1;
+  color: #fff;
   font-size: 20px;
-  border: none;
+  font-weight: 500;
+  border: 2px solid #fff;
   height: 2.7rem;
   width: 9rem;
   border-radius: 25px;
@@ -78,8 +79,7 @@ html {
 }
 
 .button-primary:hover {
-  opacity: 1;
-  color: #e7ab5d;
+  background-color: #ffffff80;
 }
 
 .button-secondary {
@@ -149,13 +149,17 @@ html {
   margin: 0;
 }
 
+.sumary-container {
+  height: ;
+}
+
 .page-dark .content-bg {
-  background: url("./assets/img/intro/intro.png");
+  background: url("./assets/img/intro/intro-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  min-width: 65vw;
+  min-height: 100%;
+  min-width: 100%;
   float: left;
   position: absolute;
   top: 0;
@@ -163,13 +167,18 @@ html {
 }
 
 .page-dark .content-text {
-  color: #f1e9d7;
-  text-align: right;
-  position: absolute;
-  top: 40%;
-  right: 0;
-  width: 25rem;
-  margin-right: 7rem;
+  background: url("./assets/img/intro/intro-element.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 80%;
+  display: inline-flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80vh;
 }
 
 .question-image {
