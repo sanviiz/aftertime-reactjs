@@ -6,9 +6,10 @@ export default function ProgressBar(props) {
   const { completed, tooltip } = props;
 
   const containerStyles = {
-    height: 17,
+    height: 21,
     width: "50%",
-    backgroundColor: "#505FA3",
+    backgroundColor: "#ffffff40",
+    border: "2px solid #fff",
     borderRadius: 50,
     margin: 50,
     marginRight: 10,
@@ -18,7 +19,7 @@ export default function ProgressBar(props) {
     transition: "width 1s ease-in-out",
     height: "100%",
     width: `${completed}%`,
-    backgroundColor: "#E7AB5D",
+    backgroundColor: "#fff",
     borderRadius: "inherit",
     textAlign: "right",
   };
@@ -34,7 +35,7 @@ export default function ProgressBar(props) {
   };
 
   const infoIcon = {
-    width: "25px",
+    width: "27px",
   };
 
   return (
@@ -43,7 +44,7 @@ export default function ProgressBar(props) {
         <div style={fillerStyles}></div>
       </div>
       <img src={Info} alt="Information" style={infoIcon} data-tip={tooltip} />
-      <ReactTooltip type="light" />
+      <ReactTooltip type="light" multiline={true} />
     </div>
   );
 }

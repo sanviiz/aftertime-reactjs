@@ -8,8 +8,10 @@ export default function Input1({
   setGive,
   give,
   setTooltip,
+  addIndex,
 }) {
   const updateProgress = () => {
+    addIndex();
     addProgress(2.5);
     setQuestion({ ...question, input1: false, two: true });
     setGive([...give, input.current.value]);
@@ -18,7 +20,9 @@ export default function Input1({
   const input = useRef();
 
   useEffect(() => {
-    setTooltip("#");
+    setTooltip(
+      "Was this item received as a gift? <br /> Bought for you? Given to you?"
+    );
   });
 
   return (

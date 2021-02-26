@@ -32,7 +32,7 @@ export default function Choice10({
 
   useEffect(() => {
     setTooltip(
-      "An item that helped you see in a new perspective should be significant to you as a gate to the new vision."
+      "Altering our points of view can be difficult. <br /> It’s great when items can help us make a change."
     );
   });
 
@@ -53,6 +53,7 @@ export default function Choice10({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

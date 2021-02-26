@@ -9,8 +9,10 @@ export default function Choice8({
   eight,
   setEight,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
+    addIndex();
     addProgress(10);
     addScore();
     setQuestion({ ...question, eight: false, nine: true });
@@ -18,6 +20,7 @@ export default function Choice8({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, eight: false, nine: true });
     setEight([...eight, false]);
@@ -25,7 +28,7 @@ export default function Choice8({
 
   useEffect(() => {
     setTooltip(
-      "An item that you constantly use or have in you everyday is just like a good friend of yours. You would feel odd if the item isn’t around."
+      "Being a part of a routine means that the item <br /> is included in the actions you usually follow."
     );
   });
 
@@ -46,6 +49,7 @@ export default function Choice8({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

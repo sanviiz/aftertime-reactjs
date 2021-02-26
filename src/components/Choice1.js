@@ -7,6 +7,7 @@ export default function Choice1({
   question,
   addScore,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
     addProgress(2.5);
@@ -15,13 +16,14 @@ export default function Choice1({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(5);
     setQuestion({ ...question, one: false, two: true });
   };
 
   useEffect(() => {
     setTooltip(
-      "An item that was given by someone always retains something of the giver."
+      "Was this item received as a gift? <br /> Bought for you? Given to you?"
     );
   });
 
@@ -42,6 +44,7 @@ export default function Choice1({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

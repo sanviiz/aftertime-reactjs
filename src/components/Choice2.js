@@ -9,8 +9,10 @@ export default function Choice2({
   two,
   setTwo,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
+    addIndex();
     addProgress(10);
     addScore();
     setQuestion({ ...question, two: false, three: true });
@@ -18,6 +20,7 @@ export default function Choice2({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, two: false, three: true });
     setTwo([...two, false]);
@@ -25,7 +28,7 @@ export default function Choice2({
 
   useEffect(() => {
     setTooltip(
-      "An item that has been with you since your childhood has also passed through the transition stages of your life."
+      "Having an item since your childhood means that <br /> the thing has been with you through transitional stages of your life."
     );
   });
 
@@ -46,6 +49,7 @@ export default function Choice2({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

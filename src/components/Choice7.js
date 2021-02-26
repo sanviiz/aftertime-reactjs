@@ -9,8 +9,10 @@ export default function Choice7({
   seven,
   setSeven,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
+    addIndex();
     addProgress(10);
     addScore();
     setQuestion({ ...question, seven: false, eight: true });
@@ -18,6 +20,7 @@ export default function Choice7({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, seven: false, eight: true });
     setSeven([...seven, false]);
@@ -25,7 +28,7 @@ export default function Choice7({
 
   useEffect(() => {
     setTooltip(
-      "An item that is made or designed by yourself isn’t just an object but you have been with it since the making of this item."
+      "Making and designing entail planning or forming by <br /> putting parts together, construction, or creating by yourself."
     );
   });
 
@@ -46,6 +49,7 @@ export default function Choice7({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

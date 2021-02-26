@@ -9,8 +9,10 @@ export default function Choice5({
   five,
   setFive,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
+    addIndex();
     addProgress(10);
     addScore();
     setQuestion({ ...question, five: false, six: true });
@@ -18,6 +20,7 @@ export default function Choice5({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, five: false, six: true });
     setFive([...five, false]);
@@ -25,7 +28,7 @@ export default function Choice5({
 
   useEffect(() => {
     setTooltip(
-      "An item that you used to play with usually leaves the memories of enjoyment with it."
+      "Play engages in an activity for enjoyment <br /> and recreation rather than for profound or practical purposes."
     );
   });
 
@@ -46,6 +49,7 @@ export default function Choice5({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

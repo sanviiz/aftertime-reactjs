@@ -8,8 +8,10 @@ export default function Input2({
   setWho,
   who,
   setTooltip,
+  addIndex,
 }) {
   const updateProgress = () => {
+    addIndex();
     addProgress(5);
     setQuestion({ ...question, input2: false, five: true });
     setWho([...who, input.current.value]);
@@ -18,7 +20,9 @@ export default function Input2({
   const input = useRef();
 
   useEffect(() => {
-    setTooltip("#");
+    setTooltip(
+      "An item could become sentimental if it connects <br /> to someone or somewhere in your meaningful memories."
+    );
   });
 
   return (

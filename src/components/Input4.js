@@ -29,7 +29,9 @@ export default function Input4({
   const input = useRef();
 
   useEffect(() => {
-    setTooltip("#");
+    setTooltip(
+      "Altering our points of view can be difficult. <br /> It’s great when items can help us make a change."
+    );
   });
 
   return (

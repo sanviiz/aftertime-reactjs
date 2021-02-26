@@ -8,8 +8,10 @@ export default function Input3({
   setNote,
   note,
   setTooltip,
+  addIndex,
 }) {
   const updateProgress = () => {
+    addIndex();
     addProgress(5);
     setQuestion({ ...question, input3: false, seven: true });
     setNote([...note, input.current.value]);
@@ -18,7 +20,9 @@ export default function Input3({
   const input = useRef();
 
   useEffect(() => {
-    setTooltip("#");
+    setTooltip(
+      "What do you remember most fondly about this item? <br /> If this item could talk, what story would it tell?"
+    );
   });
 
   return (

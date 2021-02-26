@@ -49,6 +49,7 @@ html {
   position: relative;
   min-height: 100vh;
   background-color: #f1e9d7;
+  z-index: 10;
 }
 
 .page-dark {
@@ -153,6 +154,19 @@ html {
   height: ;
 }
 
+.page .content-bg {
+  transition: 0.3s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 100%;
+  float: left;
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+
 .page-dark .content-bg {
   background: url("./assets/img/intro/intro-bg.png");
   background-size: cover;
@@ -188,19 +202,19 @@ html {
 
 .question-input {
   display: block;
-  height: 2.2rem;
-  width: 15rem;
+  height: 2.7rem;
+  width: 18rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #505fa3;
+  background-color: #ffffff40;
+  border: 2px solid #fff;
   opacity: 0.75;
-  border: none;
   outline: none;
   border-radius: 25px;
   text-align: center;
-  margin-bottom: 1rem;
-  font-size: 20px;
-  color: #f1e9d7;
+  margin-bottom: 1.8rem;
+  font-size: 24px;
+  color: #fff;
 }
 
 .question-btn {
@@ -212,8 +226,10 @@ html {
 }
 
 .question-group p {
+  color: #fff;
   font-size: 24px;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .player-wrapper {

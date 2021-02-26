@@ -9,8 +9,10 @@ export default function Choice9({
   nine,
   setNine,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
+    addIndex();
     addProgress(10);
     addScore();
     setQuestion({ ...question, nine: false, ten: true });
@@ -18,15 +20,14 @@ export default function Choice9({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, nine: false, ten: true });
     setNine([...nine, false]);
   };
 
   useEffect(() => {
-    setTooltip(
-      "If you feel passionate about an item, it would probably be the last thing you would discard."
-    );
+    setTooltip("Passion forms through intense feelings and beliefs.");
   });
 
   return (
@@ -46,6 +47,7 @@ export default function Choice9({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

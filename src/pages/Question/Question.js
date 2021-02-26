@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Topbar from "../../components/Topbar";
-import Logo from "../../assets/logo/logo-dark.png";
+import Logo from "../../assets/logo/logo-light.png";
 import ProgressBar from "../../components/ProgressBar";
 import Choice1 from "../../components/Choice1";
 import Choice2 from "../../components/Choice2";
@@ -18,6 +18,7 @@ import Input1 from "../../components/Input1";
 import Input2 from "../../components/Input2";
 import Input3 from "../../components/Input3";
 import Input4 from "../../components/Input4";
+import { QuestionBg } from "../../components/QuestionBg";
 
 export default function Question({
   image,
@@ -69,12 +70,18 @@ export default function Question({
 
   const [progress, setProgress] = useState(0);
 
+  const [index, setIndex] = useState(0);
+
   const addProgress = (value) => {
     setProgress((prevProgress) => prevProgress + value);
   };
 
   const addScore = () => {
     setScore((prevScore) => prevScore + 1);
+  };
+
+  const addIndex = () => {
+    setIndex((prevIndex) => prevIndex + 1);
   };
 
   return (
@@ -85,7 +92,11 @@ export default function Question({
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="page">
-        <Topbar imgSrc={Logo} lineColor="topLine-dark" />
+        <Topbar imgSrc={Logo} lineColor="topLine-light" />
+        <div
+          className="content-bg"
+          style={{ backgroundImage: `url(${QuestionBg[index]})` }}
+        ></div>
         <div className="question-container">
           <div className="container">
             <div className="row">
@@ -108,6 +119,7 @@ export default function Question({
                       call={call}
                       setCall={setCall}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.one && (
@@ -117,6 +129,7 @@ export default function Question({
                       question={question}
                       addScore={addScore}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.input1 && (
@@ -127,6 +140,7 @@ export default function Question({
                       give={give}
                       setGive={setGive}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.two && (
@@ -138,6 +152,7 @@ export default function Question({
                       two={two}
                       setTwo={setTwo}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.three && (
@@ -149,6 +164,7 @@ export default function Question({
                       three={three}
                       setThree={setThree}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.four && (
@@ -158,6 +174,7 @@ export default function Question({
                       question={question}
                       addScore={addScore}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.input2 && (
@@ -168,6 +185,7 @@ export default function Question({
                       who={who}
                       setWho={setWho}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.five && (
@@ -179,6 +197,7 @@ export default function Question({
                       five={five}
                       setFive={setFive}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.six && (
@@ -188,6 +207,7 @@ export default function Question({
                       question={question}
                       addScore={addScore}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.input3 && (
@@ -198,6 +218,7 @@ export default function Question({
                       note={note}
                       setNote={setNote}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.seven && (
@@ -209,6 +230,7 @@ export default function Question({
                       seven={seven}
                       setSeven={setSeven}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.eight && (
@@ -220,6 +242,7 @@ export default function Question({
                       eight={eight}
                       setEight={setEight}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.nine && (
@@ -231,6 +254,7 @@ export default function Question({
                       nine={nine}
                       setNine={setNine}
                       setTooltip={setTooltip}
+                      addIndex={addIndex}
                     />
                   )}
                   {question.ten && (

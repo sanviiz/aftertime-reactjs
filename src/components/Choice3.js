@@ -9,8 +9,10 @@ export default function Choice3({
   three,
   setThree,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
+    addIndex();
     addProgress(10);
     addScore();
     setQuestion({ ...question, three: false, four: true });
@@ -18,6 +20,7 @@ export default function Choice3({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, three: false, four: true });
     setThree([...three, false]);
@@ -25,7 +28,7 @@ export default function Choice3({
 
   useEffect(() => {
     setTooltip(
-      "An item that has been passed on should be something that was forwarded from the generations."
+      "‘It was passed on’ means that someone gave <br /> the item to you after receiving it from someone else."
     );
   });
 
@@ -46,6 +49,7 @@ export default function Choice3({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

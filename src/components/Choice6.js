@@ -7,6 +7,7 @@ export default function Choice6({
   question,
   addScore,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
     addProgress(5);
@@ -15,13 +16,14 @@ export default function Choice6({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, six: false, seven: true });
   };
 
   useEffect(() => {
     setTooltip(
-      "Immediately being able to recall some story about it means that this item should be something that important to you."
+      "What do you remember most fondly about this item? <br /> If this item could talk, what story would it tell?"
     );
   });
 
@@ -42,6 +44,7 @@ export default function Choice6({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

@@ -7,6 +7,7 @@ export default function Choice4({
   question,
   addScore,
   setTooltip,
+  addIndex,
 }) {
   const updateProgressYes = () => {
     addProgress(5);
@@ -15,13 +16,14 @@ export default function Choice4({
   };
 
   const updateProgressNo = () => {
+    addIndex();
     addProgress(10);
     setQuestion({ ...question, four: false, five: true });
   };
 
   useEffect(() => {
     setTooltip(
-      "An item could remind you of a memorable event, place or person."
+      "An item could become sentimental if it connects <br /> to someone or somewhere in your meaningful memories."
     );
   });
 
@@ -42,6 +44,7 @@ export default function Choice4({
           >
             Yes
           </button>
+          <br />
           <button className="button-primary" onClick={updateProgressNo}>
             No
           </button>

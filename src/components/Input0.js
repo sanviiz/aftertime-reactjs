@@ -8,15 +8,19 @@ export default function Input0({
   setCall,
   call,
   setTooltip,
+  addIndex,
 }) {
   const updateProgress = () => {
+    addIndex();
     addProgress(5);
     setQuestion({ ...question, input0: false, one: true });
     setCall([...call, input.current.value]);
   };
 
   useEffect(() => {
-    setTooltip("Type the name that you normally call this item.");
+    setTooltip(
+      "Calling an item with a specific name is <br /> to indicate ownership and affection."
+    );
   });
 
   const input = useRef();
