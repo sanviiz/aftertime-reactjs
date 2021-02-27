@@ -13,11 +13,6 @@ export default function No() {
     >
       <div className="page-dark">
         <Topbar imgSrc={Logo} lineColor="topLine-light" />
-        <div className="sumary-container">
-          <div className="container">
-            <div className="row"></div>
-          </div>
-        </div>
       </div>
     </motion.div>
   );
