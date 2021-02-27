@@ -2,10 +2,20 @@
   font-family: Apertura;
 }
 
+#root,
 body,
 html {
   background-color: #f1e9d7;
   height: 100%;
+}
+
+.loading-container {
+  background-color: #f1e9d7;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .topLine-dark {
