@@ -95,6 +95,7 @@ export default function Routes() {
             who={who[round]}
             note={note[round]}
             perspective={perspective[round]}
+            addRound={addRound}
           />
         </Route>
         <Route path="/no">
