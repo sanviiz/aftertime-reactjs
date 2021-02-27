@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import Topbar from "../../components/Topbar";
 import Logo from "../../assets/logo/logo-light.png";
+import IntroBg from "../../assets/img/intro/intro-bg.png";
 import { motion } from "framer-motion";
 
 export default function Intro({ addImage }) {
@@ -26,9 +27,12 @@ export default function Intro({ addImage }) {
       exit={{ opacity: 0, x: "-100%" }}
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
-      <div className="page-dark">
+      <div className="page">
         <Topbar imgSrc={Logo} lineColor="topLine-light" />
-        <div className="content-bg"></div>
+        <div
+          className="content-bg"
+          style={{ backgroundImage: `url(${IntroBg})` }}
+        ></div>
         <div className="content-text">
           <div style={{ width: "700px" }}>
             <h1 className="display-4 mb-4" style={{ fontWeight: "500" }}>

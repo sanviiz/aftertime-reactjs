@@ -9,6 +9,11 @@ html {
   height: 100%;
 }
 
+h1,
+p {
+  color: #fff;
+}
+
 .loading-container {
   background-color: #f1e9d7;
   display: flex;
@@ -82,8 +87,9 @@ html {
   font-size: 20px;
   font-weight: 500;
   border: 2px solid #fff;
-  height: 2.7rem;
-  width: 9rem;
+  height: 2.9rem;
+  width: auto;
+  padding: 0 1.8rem;
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
@@ -176,20 +182,7 @@ html {
   z-index: -5;
 }
 
-.page-dark .content-bg {
-  background: url("./assets/img/intro/intro-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100%;
-  min-width: 100%;
-  float: left;
-  position: absolute;
-  top: 0;
-  z-index: -5;
-}
-
-.page-dark .content-text {
+.page .content-text {
   background: url("./assets/img/intro/intro-element.png");
   background-size: contain;
   background-position: center;
@@ -256,6 +249,13 @@ html {
 .question-container {
   display: flex;
   height: 75vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-container {
+  display: flex;
+  height: 80vh;
   justify-content: space-between;
   align-items: center;
 }

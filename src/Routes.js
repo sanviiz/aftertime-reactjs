@@ -57,7 +57,6 @@ export default function Routes() {
         <Route path="/question">
           <Question
             image={images[round]}
-            addRound={addRound}
             two={two}
             setTwo={setTwo}
             three={three}
@@ -84,6 +83,7 @@ export default function Routes() {
         </Route>
         <Route path="/yes">
           <Yes
+            image={images[round]}
             two={two[round]}
             three={three[round]}
             five={five[round]}
@@ -98,7 +98,7 @@ export default function Routes() {
           />
         </Route>
         <Route path="/no">
-          <No />
+          <No image={images[round]} addRound={addRound} />
         </Route>
         <Route path="/send">
           <Send />

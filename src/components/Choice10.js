@@ -48,14 +48,18 @@ export default function Choice10({
         <div className="question-btn">
           <button
             className="button-primary"
-            style={{ marginBottom: "2rem" }}
+            style={{ marginBottom: "2rem", width: "160px" }}
             onClick={updateProgressYes}
           >
-            Yes
+            YES
           </button>
           <br />
-          <button className="button-primary" onClick={updateProgressNo}>
-            No
+          <button
+            className="button-primary"
+            onClick={updateProgressNo}
+            style={{ width: "160px" }}
+          >
+            NO
           </button>
         </div>
       </div>

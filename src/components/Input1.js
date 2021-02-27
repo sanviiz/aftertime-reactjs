@@ -38,10 +38,10 @@ export default function Input1({
         <div className="question-btn">
           <button
             className="button-primary"
-            style={{ marginBottom: "2rem" }}
+            style={{ marginBottom: "2rem", width: "160px" }}
             onClick={updateProgress}
           >
-            Confirm
+            CONFIRM
           </button>
         </div>
       </div>
