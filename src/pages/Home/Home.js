@@ -116,9 +116,10 @@ export default function Home() {
               Bring your beloved stuff to Aftertime
             </h1>
             <p className="mb-5" style={{ fontSize: "1.5rem" }}>
-              Aftertime helps reveal l objects that are truly important to you
-              through the Sentimental Value Quiz and encourages the preservation
-              of items by sending them via emails to the future you.
+              Aftertime helps reveal l objects that are truly important <br />
+              to you through the Sentimental Value Quiz and <br /> encourages
+              the preservation of items by sending them <br /> via emails to the
+              future you.
             </p>
             <Link to="/intro">
               <button className="button-primary" style={{ width: "190px" }}>
