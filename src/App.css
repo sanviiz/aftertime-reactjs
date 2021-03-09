@@ -81,7 +81,7 @@ p {
 
 .line-break {
   width: 100%;
-  height: 750px;
+  height: 75%;
 }
 
 .home-logo {
@@ -91,7 +91,7 @@ p {
 
 .home-element {
   position: absolute;
-  width: 650px;
+  width: 37%;
   -webkit-animation: spin 17s linear infinite;
   -moz-animation: spin 17s linear infinite;
   animation: spin 17s linear infinite;
