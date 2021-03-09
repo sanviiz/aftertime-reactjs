@@ -53,7 +53,11 @@ export default function Intro({ addImage }) {
               onChange={finishSelect}
               hidden
             />
-            <button className="button-primary" onClick={upload}>
+            <button
+              className="button-primary"
+              onClick={upload}
+              style={{ width: "190px" }}
+            >
               UPLOAD
             </button>
           </div>

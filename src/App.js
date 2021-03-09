@@ -25,7 +25,9 @@ function App() {
       });
     });
     await Promise.all(promises);
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
   };
 
   useEffect(() => {
