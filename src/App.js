@@ -36,7 +36,12 @@ function App() {
     <div className="App">
       {loading ? (
         <div className="loading-container">
-          <ClockLoader color={color} css={override} size={100} />
+          <div>
+            <ClockLoader color={color} css={override} size={250} />
+            <p style={{ fontSize: "1.5rem", marginTop: "2rem" }}>
+              Please wait...
+            </p>
+          </div>
         </div>
       ) : (
         <Routes />
