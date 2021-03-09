@@ -5,7 +5,7 @@
 #root,
 body,
 html {
-  background-color: #f1e9d7;
+  background-color: #bdc6cd;
   height: 100%;
 }
 
@@ -15,7 +15,7 @@ p {
 }
 
 .loading-container {
-  background-color: #f1e9d7;
+  background-color: #bdc6cd;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -63,8 +63,55 @@ p {
 .page {
   position: relative;
   min-height: 100vh;
-  background-color: #f1e9d7;
+  background-color: #bdc6cd;
   z-index: 10;
+}
+
+.home-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-break {
+  width: 100%;
+  height: 750px;
+}
+
+.home-logo {
+  position: absolute;
+  width: 300px;
+}
+
+.home-element {
+  position: absolute;
+  width: 650px;
+  -webkit-animation: spin 17s linear infinite;
+  -moz-animation: spin 17s linear infinite;
+  animation: spin 17s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .page-dark {
@@ -76,6 +123,7 @@ p {
 
 .extend-page {
   min-height: 100vh;
+  position: relative;
 }
 
 .button-primary {
@@ -87,7 +135,7 @@ p {
   font-size: 20px;
   font-weight: 500;
   border: 2px solid #fff;
-  height: 2.9rem;
+  height: 3.3rem;
   width: auto;
   padding: 0 1.8rem;
   border-radius: 25px;
@@ -105,7 +153,7 @@ p {
   display: block;
   background-color: #e7ab5d;
   opacity: 1;
-  color: #f1e9d7;
+  color: #bdc6cd;
   font-size: 20px;
   border: none;
   height: 2.7rem;
@@ -121,8 +169,33 @@ p {
   opacity: 1;
 }
 
+.video-btn {
+  width: 100vw;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  bottom: 10%;
+}
+
+.home-image-btn {
+  width: 100vw;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  bottom: 25%;
+}
+
+.home-image {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 20%;
+}
+
 .btn-center {
-  margin-top: 3%;
+  z-index: 10;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,17 +207,19 @@ p {
 }
 
 .extend-page .content-bg {
-  background: url("./assets/img/home/home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 93vh;
-  min-width: 65vw;
+  min-height: 86%;
+  min-width: 100%;
   float: left;
+  position: absolute;
+  top: 4%;
+  z-index: 10;
 }
 
 .extend-page .content-text {
-  color: #f1e9d7;
+  color: #bdc6cd;
   text-align: right;
   position: absolute;
   top: 130%;
@@ -154,15 +229,32 @@ p {
 }
 
 .footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   display: flex;
   min-height: 7vh;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5rem;
+  padding: 0 10%;
   font-size: 14px;
 }
 
+.footer-line {
+  width: 80%;
+  border-top: 1px solid #fff;
+  position: absolute;
+  bottom: 7%;
+}
+
 .footer p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer a {
+  color: #fff !important;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -174,10 +266,11 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100%;
   min-width: 100%;
   float: left;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: -5;
 }
@@ -235,6 +328,7 @@ p {
 }
 
 .player-wrapper {
+  z-index: 10;
   margin-top: 2rem;
   position: relative;
   padding-top: 39.4%;
@@ -242,7 +336,7 @@ p {
 
 .react-player {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: 15%;
 }
 
