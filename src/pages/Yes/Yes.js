@@ -8,16 +8,16 @@ import YesBg from "../../assets/img/summary/yes-bg.png";
 export default function Yes(props) {
   const {
     image,
-    // two,
+    two,
     // three,
-    // five,
+    five,
     // seven,
-    // eight,
-    // nine,
-    // call,
-    // give,
-    // who,
-    // note,
+    eight,
+    nine,
+    call,
+    give,
+    who,
+    note,
     // perspective,
     addRound,
   } = props;
@@ -47,9 +47,23 @@ export default function Yes(props) {
                     This object seems to be very important to you.
                   </h1>
                   <p className="mb-4" style={{ fontSize: "1.5rem" }}>
-                    Splendid! This item is significant in your life.
+                    Splendid! {call} seems to be very significant to your life.
+                    {give && <br />}
+                    {give && `This item is given to you by : ${give}`}
+                    {two && <br />}
+                    {two && `It has been with you since childhood.`}
+                    {who && <br />}
+                    {who && `It reminds you of : ${who}`}
+                    {five && <br />}
+                    {five && `You use to play with this item.`}
+                    {note && <br />}
+                    {note && `Story about this item: ${note}`}
+                    {eight && <br />}
+                    {eight && `This item is part of your routine.`}
+                    {nine && <br />}
+                    {nine && `And you feel passionated about it.`}
                     <br />
-                    You would miss this item if it were not around.
+                    We think you would miss this item if it were not around.
                   </p>
                   <button
                     className="button-primary mb-3"

@@ -16,10 +16,10 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const cacheImages = async (srcArray) => {
-    const promises = await srcArray.map((src) => {
+    const promises = await srcArray.map((image) => {
       return new Promise(function (resolve, reject) {
         const img = new Image();
-        img.src = src;
+        img.src = image;
         img.onload = resolve();
         img.onerror = reject();
       });
@@ -31,7 +31,8 @@ function App() {
   };
 
   useEffect(() => {
-    cacheImages(CacheImages);
+    const imgs = CacheImages;
+    cacheImages(imgs);
   }, []);
 
   return (

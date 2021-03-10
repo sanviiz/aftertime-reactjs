@@ -99,7 +99,21 @@ export default function Routes() {
           />
         </Route>
         <Route path="/no">
-          <No image={images[round]} addRound={addRound} />
+          <No
+            image={images[round]}
+            two={two[round]}
+            three={three[round]}
+            five={five[round]}
+            seven={seven[round]}
+            eight={eight[round]}
+            nine={nine[round]}
+            call={call[round]}
+            give={give[round]}
+            who={who[round]}
+            note={note[round]}
+            perspective={perspective[round]}
+            addRound={addRound}
+          />
         </Route>
         <Route path="/send">
           <Send />

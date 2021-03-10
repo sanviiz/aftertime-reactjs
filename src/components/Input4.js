@@ -11,19 +11,24 @@ export default function Input4({
   score,
   setTooltip,
 }) {
+  const isEmpty = (str) => !str.trim().length;
+
   const history = useHistory();
 
   const updateProgress = () => {
-    addProgress(5);
-    setQuestion({ ...question, input4: false });
-    setPerspective([...perspective, input.current.value]);
-    setTimeout(() => {
-      if (score >= 2) {
-        history.push("/yes");
-      } else {
-        history.push("/no");
-      }
-    }, 500);
+    if (isEmpty(input.current.value)) alert("Please fill an input");
+    else {
+      addProgress(5);
+      setQuestion({ ...question, input4: false });
+      setPerspective([...perspective, input.current.value]);
+      setTimeout(() => {
+        if (score >= 2) {
+          history.push("/yes");
+        } else {
+          history.push("/no");
+        }
+      }, 500);
+    }
   };
 
   const input = useRef();

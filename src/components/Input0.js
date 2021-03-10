@@ -10,11 +10,16 @@ export default function Input0({
   setTooltip,
   addIndex,
 }) {
+  const isEmpty = (str) => !str.trim().length;
+
   const updateProgress = () => {
-    addIndex();
-    addProgress(5);
-    setQuestion({ ...question, input0: false, one: true });
-    setCall([...call, input.current.value]);
+    if (isEmpty(input.current.value)) alert("Please fill an input");
+    else {
+      addIndex();
+      addProgress(5);
+      setQuestion({ ...question, input0: false, one: true });
+      setCall([...call, input.current.value]);
+    }
   };
 
   useEffect(() => {
