@@ -24,7 +24,7 @@ export default function No(props) {
   } = props;
 
   const tooltip =
-    `Splendid! ${call} seems to be very significant to your life.` +
+    `${call} doesn’t seem to matter to you that much.` +
     (give ? `<br />This item is given to you by : ${give}` : "") +
     (two ? `<br />It has been with you since childhood.` : "") +
     (who ? `<br />It reminds you of : ${who}` : "") +
@@ -73,7 +73,7 @@ export default function No(props) {
                     TRY ANOTHER
                   </button>
                   <button
-                    style={{ cursor: "default" }}
+                    style={{ cursor: "default", padding: "0 0.7rem" }}
                     className="button-primary mb-3"
                     data-tip={tooltip}
                   >

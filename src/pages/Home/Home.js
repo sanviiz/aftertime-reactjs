@@ -136,8 +136,8 @@ export default function Home() {
             <a href="https://fb.me/sendme.aftertime">Contact us</a>
           </div>
         </div>
-        <div ref={bottomRef}></div>
       </div>
+      <div ref={bottomRef}></div>
     </motion.div>
   );
 }

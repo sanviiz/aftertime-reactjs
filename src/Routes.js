@@ -116,7 +116,22 @@ export default function Routes() {
           />
         </Route>
         <Route path="/send">
-          <Send />
+          <Send
+            image={images}
+            two={two}
+            three={three}
+            five={five}
+            seven={seven}
+            eight={eight}
+            nine={nine}
+            call={call}
+            give={give}
+            who={who}
+            note={note}
+            perspective={perspective}
+            round={round}
+            addRound={addRound}
+          />
         </Route>
       </Switch>
     </AnimatePresence>
