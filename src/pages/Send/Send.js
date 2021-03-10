@@ -110,7 +110,7 @@ export default function Send(props) {
       <div className="extend-page">
         <div ref={imageSlider}></div>
         <div className="send-wrapper">
-          <h1 className="display-3 mb-3 mt-5" style={{ fontWeight: "500" }}>
+          <h1 className="display-5 mb-3 mt-5" style={{ fontWeight: "500" }}>
             Bring your beloved stuff to Aftertime
           </h1>
           <div className="img-slider">
@@ -150,7 +150,7 @@ export default function Send(props) {
             </div>
           </div>
           <div>
-            <p className="mt-4 mb-4" style={{ fontSize: "1.5rem" }}>
+            <p className="mt-4 mb-4" style={{ fontSize: "1.1rem" }}>
               <strong style={{ fontSize: "2rem" }}>{call[imageIndex]}</strong>
               {give[imageIndex] && <br />}
               {give[imageIndex] &&
@@ -187,7 +187,7 @@ export default function Send(props) {
             <img
               src={breakPage}
               alt="break-page"
-              class="mt-5 mb-5"
+              class="mt-5 mb-4"
               style={{ height: "10px" }}
             />
           </div>

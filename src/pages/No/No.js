@@ -55,7 +55,7 @@ export default function No(props) {
               <div className="col-md-1"></div>
               <div className="col-md-6 d-flex justify-content-center align-items-center text-left">
                 <div>
-                  <h1 className="display-3 mb-4" style={{ fontWeight: "500" }}>
+                  <h1 className="display-4 mb-4" style={{ fontWeight: "500" }}>
                     This object seems to be not so important.
                   </h1>
                   <p className="mb-4" style={{ fontSize: "1.5rem" }}>
