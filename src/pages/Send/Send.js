@@ -6,6 +6,11 @@ import SendBg from "../../assets/img/send/send-bg.png";
 import breakPage from "../../assets/img/send/breakpage.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
+import sendMeAftertime from "../../assets/img/send/sendme-aftertime.png";
+import Gmail from "../../assets/img/send/gmail.png";
+import Outlook from "../../assets/img/send/outlook.png";
 
 export default function Send(props) {
   const {
@@ -27,8 +32,25 @@ export default function Send(props) {
 
   const imageSlider = useRef();
 
+  const bottomRef = useRef();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [more, setMore] = useState(false);
+
+  const [isOpenGmail, setIsOpenGmail] = useState(false);
+
+  const [isOpenOutlook, setIsOpenOutlook] = useState(false);
+
   const scrollToSlider = () => {
     imageSlider.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scrollToBottom = () => {
+    bottomRef.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
@@ -79,7 +101,12 @@ export default function Send(props) {
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="page">
-        <Topbar imgSrc={Logo} lineColor="topLine-light" />
+        <Topbar
+          imgSrc={Logo}
+          lineColor="topLine-light"
+          link={true}
+          addRound={addRound}
+        />
         <div
           className="content-bg"
           style={{ backgroundImage: `url(${SendBg})` }}
@@ -180,7 +207,13 @@ export default function Send(props) {
             >
               ADD MORE
             </button>
-            <button className="button-primary" style={{ width: "190px" }}>
+            <button
+              className="button-primary"
+              style={{ width: "190px" }}
+              onClick={() => {
+                scrollToBottom();
+              }}
+            >
               CONTINUE
             </button>
             <br />
@@ -193,6 +226,84 @@ export default function Send(props) {
           </div>
         </div>
       </div>
+      <div className="extend-page">
+        <div className="send-wrapper">
+          <div style={{ width: "700px" }}>
+            <h1
+              className="display-5 mb-3"
+              style={{ fontWeight: "500", marginTop: "7rem" }}
+            >
+              CREATE YOUR
+              <br />
+              <strong style={{ fontSize: "3rem" }}>TIME CAPSULE</strong>
+            </h1>
+            <p className="mb-5 mt-5" style={{ fontSize: "1.2rem" }}>
+              Remember your identity and memories through your precious items.
+              <br />
+              Send them to your future and continue to forward to future
+              generations.
+            </p>
+            <button
+              className="button-primary mb-3"
+              onClick={() => setIsOpen(true)}
+            >
+              Send to Aftertime
+            </button>
+            {isOpen && (
+              <Lightbox
+                mainSrc={sendMeAftertime}
+                onCloseRequest={() => setIsOpen(false)}
+              />
+            )}
+            <p
+              style={{
+                fontSize: "1.2rem",
+                cursor: "pointer",
+              }}
+              onClick={() => setMore(true)}
+            >
+              <u>or send by yourself</u>
+            </p>
+            {more && (
+              <>
+                <button
+                  className="button-primary mb-3 mr-4"
+                  onClick={() => setIsOpenGmail(true)}
+                >
+                  Send by Gmail
+                </button>
+                {isOpenGmail && (
+                  <Lightbox
+                    mainSrc={Gmail}
+                    onCloseRequest={() => setIsOpenGmail(false)}
+                  />
+                )}
+                <button
+                  className="button-primary mb-3"
+                  onClick={() => setIsOpenOutlook(true)}
+                >
+                  Send by Outlook
+                </button>
+                {isOpenOutlook && (
+                  <Lightbox
+                    mainSrc={Outlook}
+                    onCloseRequest={() => setIsOpenOutlook(false)}
+                  />
+                )}
+              </>
+            )}
+          </div>
+          <div className="footer-line"></div>
+          <div className="footer">
+            <p>
+              © 2021 by PANTAWAN CH.︱All of the contents are only for the
+              educational purpose.
+            </p>
+            <a href="https://fb.me/sendme.aftertime">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div ref={bottomRef}></div>
     </motion.div>
   );
 }

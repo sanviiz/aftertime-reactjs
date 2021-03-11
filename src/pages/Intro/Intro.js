@@ -28,7 +28,7 @@ export default function Intro({ addImage }) {
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="page">
-        <Topbar imgSrc={Logo} lineColor="topLine-light" />
+        <Topbar imgSrc={Logo} lineColor="topLine-light" link={true} />
         <div
           className="content-bg"
           style={{ backgroundImage: `url(${IntroBg})` }}
