@@ -76,7 +76,7 @@ export default function Home() {
         <div className="player-wrapper">
           <ReactPlayer
             className="react-player"
-            url="https://youtu.be/Oh6HJxCutQc"
+            url="https://youtu.be/Dx5bbTZthOQ"
             volume="0.3"
             width="70%"
             height="100%"
