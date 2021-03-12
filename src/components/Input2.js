@@ -38,7 +38,7 @@ export default function Input2({
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="question-group">
-        <p>Who or where does this item remind you of?</p>
+        <p>Of who or where does this item remind you?</p>
         <input type="text" className="question-input" ref={input} />
         <div className="question-btn">
           <button

@@ -47,7 +47,7 @@ export default function Input4({
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="question-group">
-        <p>What is the new perspective you find through this item?</p>
+        <p>What is the new view you discovered through this item?</p>
         <input type="text" className="question-input" ref={input} />
         <div className="question-btn">
           <button

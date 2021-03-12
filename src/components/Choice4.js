@@ -8,6 +8,8 @@ export default function Choice4({
   addScore,
   setTooltip,
   addIndex,
+  who,
+  setWho,
 }) {
   const updateProgressYes = () => {
     addProgress(5);
@@ -19,6 +21,7 @@ export default function Choice4({
     addIndex();
     addProgress(10);
     setQuestion({ ...question, four: false, five: true });
+    setWho([...who, false]);
   };
 
   useEffect(() => {
@@ -35,7 +38,11 @@ export default function Choice4({
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="question-group">
-        <p>Is this item remind you of someone or somewhere?</p>
+        <p>
+          Is this item remind you of
+          <br />
+          someone or somewhere?
+        </p>
         <div className="question-btn">
           <button
             className="button-primary"

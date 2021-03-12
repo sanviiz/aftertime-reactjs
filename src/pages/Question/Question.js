@@ -130,6 +130,8 @@ export default function Question({
                       addScore={addScore}
                       setTooltip={setTooltip}
                       addIndex={addIndex}
+                      give={give}
+                      setGive={setGive}
                     />
                   )}
                   {question.input1 && (
@@ -175,6 +177,8 @@ export default function Question({
                       addScore={addScore}
                       setTooltip={setTooltip}
                       addIndex={addIndex}
+                      who={who}
+                      setWho={setWho}
                     />
                   )}
                   {question.input2 && (
@@ -208,6 +212,8 @@ export default function Question({
                       addScore={addScore}
                       setTooltip={setTooltip}
                       addIndex={addIndex}
+                      note={note}
+                      setNote={setNote}
                     />
                   )}
                   {question.input3 && (
@@ -265,6 +271,8 @@ export default function Question({
                       addScore={addScore}
                       score={score}
                       setTooltip={setTooltip}
+                      perspective={perspective}
+                      setPerspective={setPerspective}
                     />
                   )}
                   {question.input4 && (

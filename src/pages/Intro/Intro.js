@@ -40,8 +40,9 @@ export default function Intro({ addImage }) {
             </h1>
             <p className="mb-4" style={{ fontSize: "1.2rem" }}>
               Prepare a digital photograph of an item you wish to send to your
-              future; make sure that the object can be seen clearly in the
-              photo.
+              future;
+              <br />
+              make sure that the object can be seen clearly in the photo.
               <br />* If possible, take the photo of your item against a plain
               background.
             </p>

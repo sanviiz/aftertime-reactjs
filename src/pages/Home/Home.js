@@ -113,7 +113,7 @@ export default function Home() {
         <div className="home-wrapper">
           <div style={{ width: "900px" }}>
             <h1 className="display-3 mb-4" style={{ fontWeight: "500" }}>
-              Bring your beloved stuff to Aftertime
+              Bring your beloved item to Aftertime
             </h1>
             <p className="mb-5" style={{ fontSize: "1.5rem" }}>
               Aftertime helps reveal l objects that are truly important <br />

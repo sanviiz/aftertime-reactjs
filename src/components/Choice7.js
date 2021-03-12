@@ -40,7 +40,7 @@ export default function Choice7({
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="question-group">
-        <p>Did you make or design this item?</p>
+        <p>Did you make or design this item by yourself?</p>
         <div className="question-btn">
           <button
             className="button-primary"

@@ -9,6 +9,8 @@ export default function Choice10({
   addScore,
   score,
   setTooltip,
+  perspective,
+  setPerspective,
 }) {
   const history = useHistory();
 
@@ -21,6 +23,7 @@ export default function Choice10({
   const updateProgressNo = () => {
     addProgress(10);
     setQuestion({ ...question, ten: false });
+    setPerspective([...perspective, false]);
     setTimeout(() => {
       if (score >= 3) {
         history.push("/yes");
@@ -44,7 +47,10 @@ export default function Choice10({
       transition={{ type: "spring", stiffness: 70, duration: 0.5 }}
     >
       <div className="question-group">
-        <p>Has item helped you find a new perspective?</p>
+        <p>
+          Has the item helped you find
+          <br />a fresh perspective?
+        </p>
         <div className="question-btn">
           <button
             className="button-primary"

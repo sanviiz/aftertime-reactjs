@@ -8,6 +8,8 @@ export default function Choice1({
   addScore,
   setTooltip,
   addIndex,
+  give,
+  setGive,
 }) {
   const updateProgressYes = () => {
     addProgress(2.5);
@@ -19,6 +21,7 @@ export default function Choice1({
     addIndex();
     addProgress(5);
     setQuestion({ ...question, one: false, two: true });
+    setGive([...give, false]);
   };
 
   useEffect(() => {
