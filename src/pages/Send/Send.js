@@ -213,6 +213,7 @@ export default function Send(props) {
             >
               ADD MORE
             </button>
+            <br className="br-resp" />
             <button
               className="button-primary button-no-bottom"
               style={{ width: "190px" }}

@@ -63,6 +63,7 @@ export default function Home() {
             >
               SEE MORE
             </button>
+            <br className="br-resp" />
             <Link to="/intro">
               <button className="button-primary" style={{ width: "190px" }}>
                 BEGIN
