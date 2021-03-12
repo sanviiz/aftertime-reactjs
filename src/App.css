@@ -533,3 +533,15 @@ p {
     transition: 0.3s;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .react-player {
+    top: 50%;
+    left: auto;
+    width: 100% !important;
+  }
+
+  .player-wrapper {
+    padding-top: 56.3%;
+  }
+}
