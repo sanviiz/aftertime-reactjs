@@ -364,6 +364,7 @@ p {
 .question-image {
   box-shadow: 0px 3px 6px #00000029;
   z-index: 1;
+  max-height: 30vh;
 }
 
 .question-input {
@@ -426,10 +427,109 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+  .footer p {
+    font-size: 0.6rem !important;
+  }
+
+  .footer a {
+    font-size: 0.6rem !important;
+  }
+
   .btn-center {
     width: 100%;
     position: absolute;
     left: 0;
     top: 70%;
+  }
+
+  .home-element {
+    position: absolute;
+    width: 60%;
+    -webkit-animation: spin 17s linear infinite;
+    -moz-animation: spin 17s linear infinite;
+    animation: spin 17s linear infinite;
+  }
+
+  .home-logo {
+    position: absolute;
+    width: 30%;
+  }
+
+  .button-primary {
+    margin-bottom: 2rem !important;
+  }
+
+  .player-wrapper {
+    padding-top: 56.3%;
+  }
+
+  .react-player {
+    top: auto;
+    left: auto;
+    width: 100% !important;
+  }
+
+  .h-yes {
+    margin-top: 4rem;
+  }
+
+  .next {
+    right: 5%;
+  }
+
+  .prev {
+    left: 5%;
+  }
+
+  .display-3,
+  .display-4,
+  .display-5 {
+    font-size: 30px !important;
+  }
+
+  .wrapper-p {
+    font-size: 0.8rem !important;
+  }
+
+  .wrapper-h {
+    font-size: 1rem !important;
+  }
+
+  .question-group p {
+    margin-bottom: 0;
+  }
+
+  .img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .question-image {
+    margin-bottom: 1.5em;
+  }
+
+  .no-wrapper {
+    margin-top: 3rem;
+  }
+
+  .button-no-bottom {
+    margin-bottom: 0 !important;
+  }
+
+  .button-primary {
+    outline: none;
+    display: inline-block;
+    background-color: transparent;
+    opacity: 1;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border: 2px solid #fff;
+    height: 3rem;
+    width: auto;
+    padding: 0 1.8rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
   }
 }

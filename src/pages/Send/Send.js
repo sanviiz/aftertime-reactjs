@@ -128,7 +128,7 @@ export default function Send(props) {
             <img
               src={breakPage}
               alt="break-page"
-              class="mt-5"
+              className="mt-5"
               style={{ height: "10px" }}
             />
           </div>
@@ -137,7 +137,10 @@ export default function Send(props) {
       <div className="extend-page">
         <div ref={imageSlider}></div>
         <div className="send-wrapper">
-          <h1 className="display-5 mb-3 mt-5" style={{ fontWeight: "500" }}>
+          <h1
+            className="display-5 mb-3 mt-3 mt-md-5"
+            style={{ fontWeight: "500" }}
+          >
             Bring your beloved stuff to Aftertime
           </h1>
           <div className="img-slider">
@@ -177,7 +180,10 @@ export default function Send(props) {
             </div>
           </div>
           <div>
-            <p className="mt-4 mb-4" style={{ fontSize: "1.1rem" }}>
+            <p
+              className="mt-3 mt-md-4 mb-md-4 wrapper-p"
+              style={{ fontSize: "1.1rem" }}
+            >
               <strong style={{ fontSize: "2rem" }}>{call[imageIndex]}</strong>
               {give[imageIndex] && <br />}
               {give[imageIndex] &&
@@ -198,7 +204,7 @@ export default function Send(props) {
               We think you would miss this item if it were not around.
             </p>
             <button
-              className="button-primary mr-5"
+              className="button-primary mr-md-5"
               style={{ width: "190px" }}
               onClick={() => {
                 addRound();
@@ -208,7 +214,7 @@ export default function Send(props) {
               ADD MORE
             </button>
             <button
-              className="button-primary"
+              className="button-primary button-no-bottom"
               style={{ width: "190px" }}
               onClick={() => {
                 scrollToBottom();
@@ -220,7 +226,7 @@ export default function Send(props) {
             <img
               src={breakPage}
               alt="break-page"
-              class="mt-5 mb-4"
+              className="mt-5 mb-4"
               style={{ height: "10px" }}
             />
           </div>

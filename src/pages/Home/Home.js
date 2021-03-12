@@ -57,7 +57,7 @@ export default function Home() {
           <div className="line-break"></div>
           <div className="home-button">
             <button
-              className="button-primary mr-5"
+              className="button-primary mr-md-5"
               style={{ width: "190px" }}
               onClick={scrollToVideo}
             >
@@ -79,6 +79,7 @@ export default function Home() {
             url="https://youtu.be/Dx5bbTZthOQ"
             volume="0.3"
             width="70%"
+            loop={true}
             height="100%"
           />
         </div>
@@ -115,7 +116,7 @@ export default function Home() {
             <h1 className="display-3 mb-4" style={{ fontWeight: "500" }}>
               Bring your beloved item to Aftertime
             </h1>
-            <p className="mb-5" style={{ fontSize: "1.5rem" }}>
+            <p className="mb-5 wrapper-p" style={{ fontSize: "1.5rem" }}>
               Aftertime helps reveal l objects that are truly important <br />
               to you through the Sentimental Value Quiz and <br /> encourages
               the preservation of items by sending them <br /> via emails to the
@@ -129,7 +130,7 @@ export default function Home() {
           </div>
           <div className="footer-line"></div>
           <div className="footer">
-            <p>
+            <p className="footer-p">
               © 2021 by PANTAWAN CH.︱All of the contents are only for the
               educational purpose.
             </p>

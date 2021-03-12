@@ -40,13 +40,16 @@ export default function Yes(props) {
         <div className="summary-container">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-1"></div>
-              <div className="col-md-6 d-flex justify-content-center align-items-center text-left">
+              <div className="col-lg-1"></div>
+              <div className="col-lg-6 d-flex justify-content-center align-items-center text-left">
                 <div>
-                  <h1 className="display-4 mb-4" style={{ fontWeight: "500" }}>
+                  <h1
+                    className="display-4 mb-md-4 h-yes"
+                    style={{ fontWeight: "500" }}
+                  >
                     This object seems to be very important to you.
                   </h1>
-                  <p className="mb-4" style={{ fontSize: "1.5rem" }}>
+                  <p className="mb-4 wrapper-p" style={{ fontSize: "1.5rem" }}>
                     Splendid! {call} is significant in your life.
                     {give && <br />}
                     {give && `This item is given to you by : ${give}`}
@@ -88,15 +91,15 @@ export default function Yes(props) {
                   </p>
                 </div>
               </div>
-              <div className="col-md-1"></div>
-              <div className="col-md-3 d-flex justify-content-center align-items-center">
+              <div className="col-lg-1"></div>
+              <div className="col-lg-3 d-flex justify-content-center align-items-center">
                 <img
                   src={image}
                   alt="img"
                   className="img-fluid question-image"
                 />
               </div>
-              <div className="col-md-1"></div>
+              <div className="col-lg-1"></div>
             </div>
           </div>
         </div>

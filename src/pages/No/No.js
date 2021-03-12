@@ -54,11 +54,11 @@ export default function No(props) {
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-6 d-flex justify-content-center align-items-center text-left">
-                <div>
+                <div class="no-wrapper">
                   <h1 className="display-4 mb-4" style={{ fontWeight: "500" }}>
                     This object seems to be not so important.
                   </h1>
-                  <p className="mb-4" style={{ fontSize: "1.5rem" }}>
+                  <p className="mb-4 wrapper-p" style={{ fontSize: "1.5rem" }}>
                     Hmm…,
                     <br />
                     This item doesn’t seem to matter to you that much.

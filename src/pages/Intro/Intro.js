@@ -38,7 +38,7 @@ export default function Intro({ addImage }) {
             <h1 className="display-4 mb-4" style={{ fontWeight: "500" }}>
               Sentimental Value Quiz
             </h1>
-            <p className="mb-4" style={{ fontSize: "1.2rem" }}>
+            <p className="mb-4 wrapper-p" style={{ fontSize: "1.2rem" }}>
               Prepare a digital photograph of an item you wish to send to your
               future;
               <br />
@@ -46,7 +46,9 @@ export default function Intro({ addImage }) {
               <br />* If possible, take the photo of your item against a plain
               background.
             </p>
-            <h5 className="mb-3">Let’s see if it has significance to you.</h5>
+            <h5 className="mb-3 wrapper-h">
+              Let’s see if it has significance to you.
+            </h5>
             <input
               ref={fileInput}
               type="file"
