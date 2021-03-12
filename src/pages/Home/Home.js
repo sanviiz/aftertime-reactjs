@@ -118,7 +118,7 @@ export default function Home() {
               Bring your beloved item to Aftertime
             </h1>
             <p className="mb-5 wrapper-p" style={{ fontSize: "1.5rem" }}>
-              Aftertime helps reveal l objects that are truly important <br />
+              Aftertime helps reveal objects that are truly important <br />
               to you through the Sentimental Value Quiz and <br /> encourages
               the preservation of items by sending them <br /> via emails to the
               future you.

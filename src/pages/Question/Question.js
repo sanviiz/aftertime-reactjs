@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Topbar from "../../components/Topbar";
 import Logo from "../../assets/logo/logo-light.png";
 import ProgressBar from "../../components/ProgressBar";
@@ -110,183 +110,181 @@ export default function Question({
               </div>
               <div className="col-md-1"></div>
               <div className="col-md-6 d-flex justify-content-center align-items-center">
-                <AnimatePresence>
-                  {question.input0 && (
-                    <Input0
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      call={call}
-                      setCall={setCall}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.one && (
-                    <Choice1
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                      give={give}
-                      setGive={setGive}
-                    />
-                  )}
-                  {question.input1 && (
-                    <Input1
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      give={give}
-                      setGive={setGive}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.two && (
-                    <Choice2
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      two={two}
-                      setTwo={setTwo}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.three && (
-                    <Choice3
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      three={three}
-                      setThree={setThree}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.four && (
-                    <Choice4
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                      who={who}
-                      setWho={setWho}
-                    />
-                  )}
-                  {question.input2 && (
-                    <Input2
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      who={who}
-                      setWho={setWho}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.five && (
-                    <Choice5
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      five={five}
-                      setFive={setFive}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.six && (
-                    <Choice6
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                      note={note}
-                      setNote={setNote}
-                    />
-                  )}
-                  {question.input3 && (
-                    <Input3
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      note={note}
-                      setNote={setNote}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.seven && (
-                    <Choice7
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      seven={seven}
-                      setSeven={setSeven}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.eight && (
-                    <Choice8
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      eight={eight}
-                      setEight={setEight}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.nine && (
-                    <Choice9
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      nine={nine}
-                      setNine={setNine}
-                      setTooltip={setTooltip}
-                      addIndex={addIndex}
-                    />
-                  )}
-                  {question.ten && (
-                    <Choice10
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      addScore={addScore}
-                      score={score}
-                      setTooltip={setTooltip}
-                      perspective={perspective}
-                      setPerspective={setPerspective}
-                    />
-                  )}
-                  {question.input4 && (
-                    <Input4
-                      addProgress={addProgress}
-                      setQuestion={setQuestion}
-                      question={question}
-                      score={score}
-                      perspective={perspective}
-                      setPerspective={setPerspective}
-                      setTooltip={setTooltip}
-                    />
-                  )}
-                </AnimatePresence>
+                {question.input0 && (
+                  <Input0
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    call={call}
+                    setCall={setCall}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.one && (
+                  <Choice1
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                    give={give}
+                    setGive={setGive}
+                  />
+                )}
+                {question.input1 && (
+                  <Input1
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    give={give}
+                    setGive={setGive}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.two && (
+                  <Choice2
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    two={two}
+                    setTwo={setTwo}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.three && (
+                  <Choice3
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    three={three}
+                    setThree={setThree}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.four && (
+                  <Choice4
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                    who={who}
+                    setWho={setWho}
+                  />
+                )}
+                {question.input2 && (
+                  <Input2
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    who={who}
+                    setWho={setWho}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.five && (
+                  <Choice5
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    five={five}
+                    setFive={setFive}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.six && (
+                  <Choice6
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                    note={note}
+                    setNote={setNote}
+                  />
+                )}
+                {question.input3 && (
+                  <Input3
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    note={note}
+                    setNote={setNote}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.seven && (
+                  <Choice7
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    seven={seven}
+                    setSeven={setSeven}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.eight && (
+                  <Choice8
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    eight={eight}
+                    setEight={setEight}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.nine && (
+                  <Choice9
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    nine={nine}
+                    setNine={setNine}
+                    setTooltip={setTooltip}
+                    addIndex={addIndex}
+                  />
+                )}
+                {question.ten && (
+                  <Choice10
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    addScore={addScore}
+                    score={score}
+                    setTooltip={setTooltip}
+                    perspective={perspective}
+                    setPerspective={setPerspective}
+                  />
+                )}
+                {question.input4 && (
+                  <Input4
+                    addProgress={addProgress}
+                    setQuestion={setQuestion}
+                    question={question}
+                    score={score}
+                    perspective={perspective}
+                    setPerspective={setPerspective}
+                    setTooltip={setTooltip}
+                  />
+                )}
               </div>
             </div>
           </div>
